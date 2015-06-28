@@ -1,0 +1,27 @@
+{
+  "name": "phaser-touch-control-plugin",
+  "version": "0.0.2",
+  "homepage": "https://github.com/TonyMtz/phaser-touch-control-plugin",
+  "authors": [
+    "tonyMtz"
+  ],
+  "description": "phaser touch control plugin",
+  "main": "src/phaser-touch-control.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "phaser",
+    "touch",
+    "control",
+    "plugin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
