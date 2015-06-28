@@ -6,11 +6,10 @@
      * TouchControl Plugin for Phaser
      */
 
-    Phaser.Plugin.TouchControl = function (game, parent, x1, y1, x2, y2) {
+    Phaser.Plugin.TouchControl = function (game, parent) {
         /* Extend the plugin */
         Phaser.Plugin.call(this, game, parent);
 
-        this.zone = new Phaser.Rectangle(x1, y1, x2, y2);
         this.isInTheZone = isInsideTheZone.bind(this);
 
         this.input = this.game.input;
@@ -47,7 +46,8 @@
         x: 0, y: 0
     };
 
-    Phaser.Plugin.TouchControl.prototype.inputEnable = function () {
+    Phaser.Plugin.TouchControl.prototype.inputEnable = function (x1, y1, x2, y2) {
+        this.zone = new Phaser.Rectangle(x1, y1, x2, y2);
         this.input.onDown.add(createCompass, this);
     };
 
